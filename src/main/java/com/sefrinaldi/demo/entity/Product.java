@@ -1,5 +1,6 @@
 package com.sefrinaldi.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -22,6 +23,7 @@ public class Product {
     private Long id;
 
     private String name;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDateTime dob;
     private BigDecimal paymentAmount;
     private String productName;
